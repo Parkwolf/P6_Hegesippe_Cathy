@@ -1,0 +1,153 @@
+@import "../../sass/variables";
+
+.ficheDetails {
+  justify-content: space-between;
+  display: flex;
+  margin: 24px $marginLarge 0 $marginLarge;
+}
+
+.detailsGauche {
+  margin-top: 6px;
+
+  .detailsTitre {
+    font-size: 36px;
+    color: $colorPrimary;
+    font-weight: 500;
+    line-height: 142.6%;
+    align-items: flex-end;
+  }
+
+  .detailsLoc {
+    color: $colorPrimary;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: flex-end;
+    line-height: 142.6%;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0 24px 0;
+    color: $colorSecond;
+
+    .tag {
+      background-color: $colorPrimary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 58px;
+      height: 25px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 142.6%;
+      margin-right: 10px;
+      border-radius: 10px;
+      padding: 3px 30px;
+      white-space:nowrap;
+    }
+  }
+}
+
+.detailsDroite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 18%;
+
+  .detailsHost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorPrimary;
+
+    .hostName {
+      font-size: 18px;
+      width: 80px;
+      font-weight: 500;
+      line-height: 142.6%;
+      padding-right: 10px;
+      text-align: right;
+      align-items: flex-end;
+      display: flex;
+    }
+
+    .hostPicture {
+      display: flex;
+      img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .detailsRating {
+    width: 196px;
+    height: 36px;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      padding: 2px 0 2px 7px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@media (max-width: $sizeMobile) {
+  .ficheDetails {
+    margin: 15px $marginMobile 0 $marginMobile;
+    display: block;
+  }
+
+  .detailsGauche {
+    .detailsTitre {
+      font-size: 18px;
+    }
+
+    .tags {
+      .tag {
+        font-size: 10px;
+        padding: 2px 15px;
+        height: 20px;
+      }
+    }
+  }
+
+  .detailsDroite {
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+
+    .detailsHost {
+      .hostPicture {
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .hostName {
+        font-size: 12px;
+        width: 55px;
+      }
+    }
+
+    .detailsRating {
+      justify-content: flex-start;
+      width: 98px;
+      height: 18px;
+      img {
+        padding: 2px 7px 2px 0;
+        height: 18px;
+        width: 18px;
+      }
+    }
+  }
+}

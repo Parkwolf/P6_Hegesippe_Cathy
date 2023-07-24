@@ -1,0 +1,109 @@
+@import "../../sass/variables";
+
+.cardBackground {
+    margin: 32px $marginLarge; //1 rem = 16px
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    background-color: #F7F7F7;
+    gap: 40px;
+    }
+
+    .cardContainer {
+        position: relative; 
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+            border-radius: 10px; 
+        }
+    
+        
+        width: fit-content;
+        height: 500px;
+        margin: auto;
+        margin-top: 55px;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        overflow: hidden;
+    
+        &:hover{
+
+        }
+    
+        .cover {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px; 
+        }
+    
+        .cardTitle {
+            display: flex;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            position: absolute;
+            align-items: flex-end;
+            color: $colorSecond;
+            line-height: 142.6%;
+            width: 21%;
+            padding-top: 28rem;
+            text-decoration: none;
+            white-space: nowrap;
+            padding-left: 10px;
+        }
+    }
+    
+
+    //////////MEDIA QUERIES MOBILE//////////
+    @media (max-width: $sizeMobile) {
+
+        .cardBackground {
+            background: none;
+            border-radius: 10px;
+            margin: 32px 0;
+            padding: 0;
+            justify-content: space-around;
+            display: block;
+        }
+
+        .cardContainer {
+            margin: 16px $marginMobile 32px $marginMobile;
+            height: 255px;
+            max-width: 100%;
+            width: auto;
+
+            .cover {
+                object-fit: cover;
+                height: 80%;
+            }
+
+            .cardTitle {
+                display: flex;
+                padding-top: 13rem;
+                font-size: 20px;
+                width: auto;
+                padding-left: 1rem;
+                align-items: flex-end;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .cardContainer {
+            .cardTitle {
+                width: 30%;
+            }
+        }
+    }

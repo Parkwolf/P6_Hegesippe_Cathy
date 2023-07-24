@@ -1,0 +1,64 @@
+@import "../../sass/variables";
+
+.errorContainer {
+    margin: 64px 32px;
+
+    .errorTitle {
+        display: flex;
+        justify-content: center;
+        font-size: 288px;
+        font-weight: 700;
+        color: $colorPrimary;
+        align-items: center;
+        text-align: center;
+        line-height: 146.6%;
+        font-style: normal;
+    }
+
+    .errorText {
+        font-weight: 500;
+        font-size: 36px;
+        font-style: normal;
+        line-height: 146.6%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: $colorPrimary;
+    }
+
+    .errorLink {
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 500;
+        align-items: flex-end;
+        display: flex;
+        justify-content: center;
+        color: $colorPrimary;
+        text-decoration-line: underline;
+        line-height: 146.6%;
+        margin: 180px 0 160px 0;
+    }
+}
+
+@media (max-width: $sizeMobile) {
+
+    .errorContainer {
+
+        .errorTitle {
+            font-size: 96px;
+        }
+
+        .errorText {
+            font-size: 18px;
+            text-align: center;
+            width: 70%;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .errorLink {
+            font-size: 14px;
+            margin: 130px 0 235px 0;
+        }
+    }
+}

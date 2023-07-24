@@ -1,0 +1,88 @@
+@import "../../sass/variables";
+
+.navbarHead {
+    max-width: 100%;
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    margin: 0 $marginLarge;
+    text-decoration: underline;
+    color: red;
+
+    img {
+        width: 210px;
+        height: 68px;
+    }
+
+    .navbarNav {
+        align-items: center;
+        display: flex;
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        width: 20%;
+        font-size: 24px;
+        font-weight: 500;
+        justify-content: space-around;
+        
+
+
+        a {
+            color: $colorPrimary;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+@media (max-width: $sizeMobile) {
+.navbarHead{
+    margin: 0 $marginMobile;
+    max-width: 100%;
+    padding-top: 20px;
+
+    img {
+        width: 145px;
+        height: 47px;
+    }
+
+    .navbarNav {
+        width: 40%;
+        font-size: 14px;
+        white-space: nowrap;
+        justify-content: space-between;
+    }
+}
+}
+
+@media (max-width: 350px) {
+.navbarHead {
+    img {
+        scale: 0.8;
+    }
+}
+}
+
+@media (min-width: 426px) and (max-width: $sizeMobile) {
+.navbarHead {
+    .navbarNav {
+        width: 30%;
+    }
+}
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+.navbarHead {
+    .navbarNav {
+        white-space: nowrap;
+        width: 30%;
+        margin-right: 40px;
+        a {
+            margin-left: 20px;
+        }
+    }
+}
+}

@@ -1,0 +1,71 @@
+@import "../../sass/variables";
+
+.menu {
+    margin: 0 208px 30px 208px;
+    max-width: 100%;
+    border-radius: 5px;
+
+    .title {
+        background: $colorPrimary;
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        color: $colorSecond;
+        width: auto;
+        justify-content: space-between;
+        line-height: 142.6%;
+        border-radius: 5px;
+        height: 47px;
+        padding: 0 33px 0 18px;
+
+        .iconClose {
+            transform: rotate(0deg);
+            transition: all 0.2s;
+        }
+
+        .iconOpen {
+            transform: rotate(180deg);
+            transition: all 0.2s;
+        }
+    }
+
+    .text {
+        width: auto;
+        background: #F7F7F7;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 146.6%;
+        color: $colorPrimary;
+        padding: 36px 27px 19px 18px;
+    }
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+@media (max-width: $sizeMobile) {
+
+    .collapse {
+        margin-bottom: 168px;
+    }
+
+    .menu {
+        margin: 0 $marginMobile 30px $marginMobile;
+
+        .title {
+            font-size: 13px;
+            padding-right: 7px;
+        }
+
+        .iconClose, .iconOpen {
+            scale: 0.6;
+        }
+
+        .text {
+            font-size: 12px;
+        }
+    }
+}

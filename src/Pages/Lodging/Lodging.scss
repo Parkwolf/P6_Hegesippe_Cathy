@@ -1,0 +1,39 @@
+@import "../../sass/variables";
+
+.collapseLodging {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 62px;
+
+    .menu {
+        width: 100%;
+        margin: 0 38px 14px 38px;
+
+        .title {
+            margin-top: 0;
+        }
+
+        .text {
+            padding: 36px 20px 19px 12px;
+        }
+    }
+}
+
+@media (max-width: $sizeMobile) {
+
+    .collapseLodging {
+        display: block;
+        max-width: 100%;
+        margin: 0 20px 50px 20px;
+        
+        .menu {
+            width: 100%;
+            margin: 16px 0 14px 0;
+            .title {
+                height: 30px;
+            }
+        }
+    }
+}
+
