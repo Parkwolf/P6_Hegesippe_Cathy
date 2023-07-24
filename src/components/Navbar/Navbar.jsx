@@ -8,7 +8,7 @@ const Navbar = () => {
         <header className="navbarHead">
             <img src={Logo} alt="Logo Kasa" />
             <nav className="navbarNav">
-                <NavLink to="/">Accueil</NavLink>
+                <NavLink to="/" exact>Accueil</NavLink>
                 <NavLink to="/about">A Propos</NavLink>
             </nav>
         </header>
